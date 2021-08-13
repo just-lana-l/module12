@@ -45,6 +45,6 @@ def reverse_number(n1):
 	print('Обратное число', n2)
 
 def string_reverse(n1):
-	
+	strev = str(n1)
 
 string_reverse(n1)
