@@ -24,27 +24,26 @@ print('Задача 4. Число наоборот')
 # 
 # Кстати, нули, которые мы убрали, называются ведущими.
 
-n1 = int(input("Введите целое число: "))
+def reverse_number(num):
+	n = 0
+	while num > 0:
+		digit = num % 10
+		num = num // 10
+		n = n * 10
+		n = n + digit 
+	print(f'Ваше число {num}. Обратное ему {n2}')
 
+def zero(num):
+	stroke = ''
+	n1 = str(num)
+	for i in n1:
+		stroke = i + stroke
+	print(f'Ваше число {num}. Обратное ему {stroke}')
 
-def reverse():
-	variations = int(input('Как будем переворачивать? 1- с нулями, 2 - без нулей: '))
-	if variations == 1:
-		string_reverse()
-	else:
-		reverse_number()
+num = int(input("Введите целое число: "))
+variations = int(input('Как будем переворачивать? 1- с нулями, 2 - без нулей: '))
 
-
-def reverse_number(n1):
-	n2 = 0
-	while n1 > 0:
-		digit = n1 % 10
-		n1 = n1 // 10
-		n2 = n2 * 10
-		n2 = n2 + digit 
-	print('Обратное число', n2)
-
-def string_reverse(n1):
-	strev = str(n1)
-
-string_reverse(n1)
+if variations == 1:
+	zero(num)
+else:
+	reverse_number(num)
