@@ -23,3 +23,14 @@ print('Задача 6. Монетка')
 # ========+=======>
 #        *|*
 #         |
+
+x = float(input('Введите х: '))
+y = float(input('Введите y: '))
+
+def check_coords(x, y):
+	if abs(x) <=1 and abs(y) <= 1:
+		print('Монетка где-то рядом')
+	else:
+		print('Монетки в этой области нет')
+	
+check_coords(x, y)

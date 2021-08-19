@@ -19,3 +19,24 @@ print('Задача 5. Текстовый редактор')
 # 
 # Количество цифр 0: 2
 # Количество букв л: 1
+
+txt = input('Введите текст: ')
+
+letter = input('Какую букву ищем: ') 
+digit = input('Какую цифру ищем: ')
+
+def count_letters(text):
+	count_letter = 0
+	count_digit = 0
+	for i in txt:
+		if i == letter:
+			count_letter += 1
+			
+		elif i == digit:
+			count_digit +=1
+
+	print(f'Количество букв {letter}: {count_letter}')		
+	print(f'Количество цифр {digit}: {count_digit}')
+
+
+count_letters(txt)
