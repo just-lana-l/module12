@@ -8,12 +8,12 @@ print('Задача 1. Сумма чисел')
 # Введите число: 5
 # 
 # Я знаю, что сумма чисел от 1 до 5 равна 15
+n = int(input('n: '))
 
-def summa_n ():
+def summa_n(n):
 	summ = 0
-	n = int(input('n: '))
 	for i in range (1,n+1):
 		summ = summ + i
 	print(f'Я знаю, что сумма чисел от 1 до {n} равна {summ}')
 
-summa_n()
+summa_n(n)

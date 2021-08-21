@@ -12,3 +12,11 @@ print('Задача 7. Опять?')
 # Конечно же, вы решили снова помочь бедняге.
 # Напишите для него такую программу.
 
+x = int(input('Input first number: '))
+y = int(input('Input second number: '))
+
+def min_num(x, y):
+	find_num = (y >= x) * y + (y < x) * x
+	print(find_num)
+
+min_num(x,y)
