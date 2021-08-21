@@ -24,18 +24,24 @@ print('Задача 4. Число наоборот')
 # 
 # Кстати, нули, которые мы убрали, называются ведущими.
 
-def reverse_number(number, withZero):
-	inverted = ""
-	for char in reversed(number):
-		inverted += char
-		
-	if withZero == "2":
-		inverted = int(inverted)
+choice = int(input('Как переворачиваем: 1 - с нулями\n2 - без нулей\n > '))
 
-	print('Обратное число',inverted)
+n = '1'
+while n != '0':
+	n = input('Введите число: ')
 
-number = input("Введите целое число: ")
-variations = input('Как будем переворачивать? 1- с нулями, 2 - без нулей: ')
-
-reverse_number(number, variations)
-
+	if n == '0':
+		print('Программа завершена')
+	
+	else:
+		def reverse_num(n):
+			rev = ''
+			for i in n:
+				rev = i + rev
+				
+			if choice == 1:
+				print(f'Число наоброт {rev}')
+			elif choice == 2:
+				print(f'Число наоброт {int(rev)}')
+					
+		reverse_num(n)

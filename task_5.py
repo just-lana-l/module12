@@ -20,15 +20,15 @@ print('Задача 5. Текстовый редактор')
 # Количество цифр 0: 2
 # Количество букв л: 1
 
-txt = input('Введите текст: ')
+text = input('Введите текст: ')
 
 letter = input('Какую букву ищем: ') 
 digit = input('Какую цифру ищем: ')
 
-def count_letters(text):
+def count_letters(txt, lttr, dgt):
 	count_letter = 0
 	count_digit = 0
-	for i in txt:
+	for i in text:
 		if i == letter:
 			count_letter += 1
 			
@@ -39,4 +39,4 @@ def count_letters(text):
 	print(f'Количество цифр {digit}: {count_digit}')
 
 
-count_letters(txt)
+count_letters(text, letter, digit)

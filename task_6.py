@@ -26,9 +26,10 @@ print('Задача 6. Монетка')
 
 x = float(input('Введите х: '))
 y = float(input('Введите y: '))
-box = 1
+
 
 def check_coords(x, y):
+	box = 1
 	if abs(x) <=box and abs(y) <= box:
 		print('Монетка где-то рядом')
 	else:
