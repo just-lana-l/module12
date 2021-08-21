@@ -23,25 +23,23 @@ print('Задача 4. Число наоборот')
 # Число наоборот: 321
 # 
 # Кстати, нули, которые мы убрали, называются ведущими.
-choice = int(input('Как переворачиваем: 1 - с нулями\n2 - без нулей\n > '))
+text = input('Введите текст: ')
 
-n = '1'
-while n != '0':
-	n = input('Введите число: ')
+letter_request = input('Какую букву ищем: ') 
+digit_request = input('Какую цифру ищем: ')
 
-	if n == '0':
-		print('Программа завершена')
-	
-	else:
-		def reverse_num(n):
-			rev = ''
-			for i in n:
-				rev = i + rev
-				
-			if choice == 1:
-				print(f'Число наоброт {rev}')
-			elif choice == 2:
-				print(f'Число наоброт {int(rev)}')
-					
-		reverse_num(n)
+def count_letters(txt, letter, digit):
+	count_letter = 0
+	count_digit = 0
+	for i in text:
+		if i == letter:
+			count_letter += 1
+			
+		elif i == digit:
+			count_digit +=1
 
+	print(f'Количество букв {letter}: {count_letter}')		
+	print(f'Количество цифр {digit}: {count_digit}')
+
+
+count_letters(text, letter_request, digit_request)
